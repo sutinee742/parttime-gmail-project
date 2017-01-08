@@ -46,6 +46,46 @@
         flex: 1 0 auto;
       }
 
+      #email-list .collection .collection-item.avatar {
+          height: auto;
+          padding-left: 72px;
+          position: relative;
+      }
+
+      .collection .collection-item.avatar {
+          min-height: 84px;
+      }
+
+      .collection .collection-item {
+          background-color: #fff;
+          line-height: 1.5rem;
+          padding: 10px 20px;
+          margin: 0;
+          border-bottom: 1px solid #e0e0e0;
+      }
+
+      ul li {
+          list-style-type: none;
+      }
+
+      li {
+          display: list-item;
+          text-align: -webkit-match-parent;
+      }
+
+      ul, menu, dir {
+          display: block;
+          list-style-type: disc;
+          -webkit-margin-before: 1em;
+          -webkit-margin-after: 1em;
+          -webkit-margin-start: 0px;
+          -webkit-margin-end: 0px;
+          -webkit-padding-start: 40px;
+      }
+
+      *, *:before, *:after {
+          box-sizing: inherit;
+      }
     </style>
 
 
@@ -127,11 +167,42 @@
     <main class="white">
       <div class="row">
 
-        <div class="col s12">
-          123
+         <div id="email-list" class="col s12 card-panel z-depth-1">
+           <ul class="collection">
+               <li class="collection-item avatar email-unread">
+                 <a href="email-template.html">
+                   <span class="circle red lighten-1">G</span>
+                   <span class="email-title">Gmail.com</span>
+                   <p class="truncate grey-text ultra-small">Welcome to Gmail.</p>
+                   <a href="email-template.html" class="secondary-content email-time">
+                     <span class="blue-text ultra-small">12:10 am</span>
+                     <i class="material-icons">grade</i>
+                   </a>
+
+                 </a>
+               </li>
+
+             <li class="collection-item avatar email-unread">
+               <span class="circle indigo lighten-1">F</span>
+               <span class="email-title">Facebook</span>
+               <p class="truncate grey-text ultra-small">You have new friend request from nan.</p>
+               <a href="email-template.html" class="secondary-content email-time">
+                 <span class="blue-text ultra-small">1:15 pm</span>
+               </a>
+             </li>
+             <li class="collection-item avatar email-unread">
+               <span class="circle light-blue">T</span>
+               <span class="email-title">Twitter</span>
+               <p class="truncate grey-text ultra-small">You have 2 new followers today.</p>
+               <a href="email-template.html" class="secondary-content email-time">
+                 <span class="blue-text ultra-small">4:32 pm</span>
+               </a>
+             </li>
+
+           </ul>
         </div>
 
-
+         </ul>
       </div>
     </main>
 
