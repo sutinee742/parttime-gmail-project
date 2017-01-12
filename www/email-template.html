@@ -19,17 +19,13 @@
       $( document ).ready(function() {
         console.log( "document loaded" );
         $(".button-collapse").sideNav();
-        $("#search-btn").click(function(e){
-          console.log(123);
-          $("#head-bar").hide();
-          $("#search-bar").show();
 
-        });
-
-        $("#close-btn").click(function(e){
-          console.log(456);
-          $("#search-bar").hide();
-          $("#head-bar").show();
+        $(".dropdown-button").dropdown({
+          inDuration: 300,
+          outDuration: 225,
+          constrain_width: false,
+          gutter: 0,
+          alignment: 'left'
         });
 
       });
@@ -101,7 +97,7 @@
           <div class="left margin-logo">
             <a href="index.html" class="white-text "><i class="material-icons" id="back-btn">arrow_back</i></a>
           </div>
-          <ul class="right hide-on-med-and-down">
+          <ul class="right">
             <li><a href="#!"><i class="material-icons">archive</i></a></li>
             <li><a href="#!"><i class="material-icons">delete</i></a></li>
             <li><a href="#!"><i class="material-icons">email</i></a></li>
@@ -111,10 +107,11 @@
         </div>
 
         <ul id="dropdown1" class="dropdown-content">
-          <li><a href="#!">one</a></li>
-          <li><a href="#!">two</a></li>
-          <!-- <li class="divider"></li> -->
-          <li><a href="#!">three</a></li>
+          <li><a href="#!" class="black-text">Change</a></li>
+          <li><a href="#!" class="black-text">Mark important</a></li>
+          <li><a href="#!" class="black-text">Mute</a></li>
+          <li><a href="#!" class="black-text">Print</a></li>
+          <li><a href="#!" class="black-text">Report spam</a></li>
         </ul>
 
       </nav>
@@ -129,7 +126,7 @@
 
 
         <div class="col s12">
-          <div id="email-details" class="col s12 card-panel">
+          <div id="email-details" class="col s12 ">
             <p class="email-subject truncate">
               "Welcome to Gmail."
               <span class="email-tag grey lighten-3 lime-text text-darken-4">Inbox</span>
@@ -164,17 +161,24 @@
                 <div class="col s1">
                   <a href="#!" class="email-action waves-effect waves-grey">
                     <i class="material-icons mdi-content-reply grey-text center">
-                      arrow_forward
+                      forward
                     </i>
                   </a>
                 </div>
 
                 <div class="col s1">
-                  <a href="#!" class="email-action waves-effect waves-grey">
+                  <a href="#!" class="email-action waves-effect waves-grey dropdown-button" data-activates="dropdown2">
                     <i class="material-icons mdi-content-reply grey-text center">
                       more_vert
                     </i>
                   </a>
+
+                  <ul id="dropdown2" class="dropdown-content">
+                    <li><a href="#!" class="black-text">Reply all</a></li>
+                    <li><a href="#!" class="black-text">Add star</a></li>
+                    <li><a href="#!" class="black-text">Print</a></li>
+                    <li><a href="#!" class="black-text">Block "..."</a></li>
+                  </ul>
                 </div>
             </div>
 
@@ -193,6 +197,7 @@
               </div>
             </div>
 
+            <hr class="grey-text text-lighten-2">
 
             <div class="email-reply">
               <div class="row">
