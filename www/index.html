@@ -26,7 +26,7 @@
 
         });
 
-        $("#close-btn").click(function(e){
+        $("#back-btn").click(function(e){
           console.log(456);
           $("#search-bar").hide();
           $("#head-bar").show();
@@ -34,6 +34,56 @@
 
       });
     </script>
+
+
+    <style>
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+
+      main {
+        flex: 1 0 auto;
+      }
+
+      .margin-logo{
+        margin-left: 10px;
+      }
+
+      .dist-search{
+        padding-top: 20px;
+      }
+
+      .let-icon{
+        position: absolute;
+        width: 42px;
+        height: 42px;
+        overflow: hidden;
+        left: 15px;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 1.5rem;
+        color: #fff;
+        font-weight: 300;
+        padding: 10px;
+
+      }
+
+      .selected{
+        border-left: 4px solid #29b6f6;
+      }
+
+      #email-list {
+        margin: 0;
+        padding: 0;
+      }
+
+
+
+
+    </style>
 
 
 
@@ -96,15 +146,20 @@
         </div>
 
         <div class="nav-wrapper z-depth-1 white" style="display:none" id="search-bar">
-          <form>
-            <div class="input-field">
-              <input id="search" type="search" />
-              <label for="search"><i class="material-icons">search</i></label>
-              <i class="material-icons" id="close-btn">close</i>
+          <div class="row">
+            <div class="col s1">
+              <a href="#" class="grey-text left margin-logo"><i class="material-icons" id="back-btn">arrow_back</i></a>
             </div>
-          </form>
+            <div class="col s10">
+                <div class="input-field dist-search">
+                  <input id="search" class="" placeholder="Search mail" type="search" />
+                </div>
+            </div>
+            <div class="col s1">
+              <a href="#" class="grey-text right"><i class="material-icons" id="voice-btn">keyboard_voice</i></a>
+            </div>
+          </div>
         </div>
-
       </nav>
 
 
@@ -114,6 +169,43 @@
 
     <main class="white">
       <div class="row">
+
+
+         <div id="email-list" class="col s12">
+           <div class="collection">
+            <a href="email-template.html" class="collection-item avatar email-unread waves-effect waves-light email-item selected" style="padding-top:20px;">
+              <span class="circle red lighten-1 let-icon">G</span>
+              <span class="email-title black-text" >Gmail.com</span>
+              <p class="truncate grey-text ultra-small">Welcome to Gmail.</p>
+              <div class="secondary-content email-time blue-text ultra-small">
+                <span class="grey-text">12:10 am</span><br/>
+                <i class="material-icons yellow-text right">grade</i>
+              </div>
+            </a>
+
+            <a href="#!" class="collection-item avatar email-unread waves-effect waves-light email-item" style="padding-top:20px;">
+              <span class="circle indigo lighten-1 let-icon">F</span>
+              <span class="email-title black-text">Facebook</span>
+              <p class="truncate grey-text ultra-small">You have new friend request from nan.</p>
+              <div class="secondary-content email-time blue-text ultra-small">
+                <span class="grey-text">1:15 pm</span><br/>
+                <i class="material-icons grey-text right">star_border</i>
+              </div>
+            </a>
+
+            <a href="#!" class="collection-item avatar email-unread waves-effect waves-light email-item" style="padding-top:20px;">
+              <span class="circle blue lighten-1 let-icon">T</span>
+              <span class="email-title black-text">Twitter</span>
+              <p class="truncate grey-text ultra-small">You have 2 new followers today.</p>
+              <div class="secondary-content email-time blue-text ultra-small">
+                <span class="grey-text">4:32 pm</span><br/>
+                <i class="material-icons grey-text right">star_border</i>
+              </div>
+            </a>
+
+          </div>
+
+
 
          <div id="email-list" class="col s12 card-panel z-depth-1">
            <ul class="collection">
@@ -150,6 +242,7 @@
              </li>
 
            </ul>
+
         </div>
 
          </ul>

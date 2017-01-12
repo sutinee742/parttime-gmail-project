@@ -42,6 +42,44 @@
         margin-right: 20px;
       }
 
+      .email-tag{
+        font-size: 0.8rem;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+
+      .email-subject {
+        font-size: 1.2rem;
+      }
+
+      .collection-item{
+        border-style: none;
+      }
+
+      .email-action{
+        margin-top: 10px;
+      }
+
+      .collection{
+        border-style: none;
+      }
+
+      .let-icon{
+        position: absolute;
+        width: 42px;
+        height: 42px;
+        overflow: hidden;
+        left: 15px;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 1.5rem;
+        color: #fff;
+        font-weight: 300;
+        padding: 10px;
+      }
+
+
 
       #email-details .email-subject {
           font-size: 1.6rem;
@@ -50,6 +88,7 @@
       .email-reply {
           padding-top: 20px;
       }
+
     </style>
 
 
@@ -93,78 +132,88 @@
           <div id="email-details" class="col s12 card-panel">
             <p class="email-subject truncate">
               "Welcome to Gmail."
-              <span class="email-tag grey lighten-3">inbox</span>
+              <span class="email-tag grey lighten-3 lime-text text-darken-4">Inbox</span>
               <i class="material-icons mdi-action-star-rate yellow-text text-darken-3 right">
                 grade
               </i>
             </p>
+
             <hr class="grey-text text-lighten-2">
-            <div class="email-content-wrap">
-              <div class="row">
-                <div class="col s10 m10 l10">
+
+
+            <div class="row">
+                <div class="col s9">
                   <ul class="collection">
                     <li class="collection-item avatar">
-                      <span class="circle red lighten-1">G</span>
+                      <span class="circle red lighten-1 let-icon">G</span>
                       <span class="email-title">Gmail.com</span>
                       <p class="truncate grey-text ultra-small">To MonMon</p>
                       <p class="grey-text ultra-small">8:24 pm</p>
                     </li>
                   </ul>
                 </div>
-                <div class="col s2 m2 l2 email-actions">
-                  <a href="#!">
-                    <span>
-                      <i class="material-icons mdi-content-reply">
-                        reply
-                      </i>
-                    </span>
-                  </a>
-                  <a href="#!">
-                    <span>
-                      <i class="material-icons mdi-navigation-more-vert">
-                        more_vert
-                      </i>
-                    </span>
-                  </a>
-                </div>
-              </div>
-              <div class="email-content">
-                <p>Hi MonMon,</p>
-                <p>"Welcome to Gmail, Enjoy it!"</p>
-                <p>
-                  "Love,
-                                  "
-                  <br>
-                  "Nan"
-                </p>
-              </div>
-            </div>
-            <div class="email-reply">
-              <div class="row">
-                <div class="col s4 m4 l4 center-align">
-                  <a href="!#">
-                    <i class="material-icons mdi-content-reply">
+
+                <div class="col s1">
+                  <a href="#!" class="email-action waves-effect waves-grey">
+                    <i class="material-icons mdi-content-reply grey-text center">
                       reply
                     </i>
                   </a>
-                  <p class="ultra-small">Reply</p>
                 </div>
-                <div class="col s4 m4 l4 center-align">
-                  <a href="!#">
-                    <i class="material-icons mdi-content-reply-all">
-                      reply_all
+
+                <div class="col s1">
+                  <a href="#!" class="email-action waves-effect waves-grey">
+                    <i class="material-icons mdi-content-reply grey-text center">
+                      arrow_forward
                     </i>
                   </a>
-                  <p class="ultra-small">Reply all</p>
                 </div>
-                <div class="col s4 m4 l4 center-align">
-                  <a href="!#">
-                    <i class="material-icons mdi-content-forward">
-                      forward
+
+                <div class="col s1">
+                  <a href="#!" class="email-action waves-effect waves-grey">
+                    <i class="material-icons mdi-content-reply grey-text center">
+                      more_vert
                     </i>
                   </a>
-                  <p class="ultra-small">Forward</p>
                 </div>
+            </div>
+
+            <div class="container">
+              <div class="row">
+                <div class="email-content">
+                  <p>Hi MonMon,</p>
+                  <p>"Welcome to Gmail, Enjoy it!"</p>
+                  <p>
+                    "Love,
+                                    "
+                    <br>
+                    "Nan"
+                  </p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="email-reply">
+              <div class="row">
+                <a href="#" class="col s4 m4 l4 center-align waves-effect waves-grey">
+                  <i class="material-icons mdi-content-reply grey-text text-darken-1">
+                    reply
+                  </i>
+                  <p class="ultra-small grey-text text-darken-1">Reply</p>
+                </a>
+                <a href="#" class="col s4 m4 l4 center-align waves-effect waves-grey">
+                  <i class="material-icons mdi-content-reply-all grey-text text-darken-1">
+                    reply_all
+                  </i>
+                  <p class="ultra-small grey-text text-darken-1">Reply all</p>
+                </a>
+                <a href="#" class="col s4 m4 l4 center-align waves-effect waves-grey">
+                  <i class="material-icons mdi-content-forward grey-text text-darken-1">
+                    forward
+                  </i>
+                  <p class="ultra-small grey-text text-darken-1">Forward</p>
+                </a>
               </div>
             </div>
           </div>
